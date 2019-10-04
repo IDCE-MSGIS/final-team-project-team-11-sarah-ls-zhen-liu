@@ -2,7 +2,7 @@
 #this is an instruction for users
 tempt=-999999 # set a default temperatue to avoid the situation that there is no value for temperature
 while(True):
-    a=input("please select 1): Input the temperature; 2): Convert into centigrade; 3): Cloth suggestion; 4): Exit.\n") # This is an instruction for users
+    a=input("please select 1): Input the temperature; 2): Convert into centigrade; 3): Clothing recommendations; 4): Exit.\n") # This is an instruction for users
     if(a==1):
         tempt=input("please enter the temperature in Fahrenheit:")# get the temperrature from the keyboard
     elif(a==2):
