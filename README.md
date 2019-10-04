@@ -32,7 +32,7 @@ For this script, you will complete the assignment that you have proposed, which 
 
 ## Final Project: Documentation
 
-Script 1:
+### Script 1:
 
 The purpose of this script is to extract weather information from the National Weather Service for a latitude/longitude input given by users. The information includes 5-day temperature and precipitation forecasts.
 
@@ -42,7 +42,7 @@ One challenge with both of these instances is that when we insert a space, we al
 
 There is a great possibility that we will apply something like this in the future. When we need to get location names from big data and want them in the same form, we need to use this method to get ideal data. Commas and spacing change the output of a large variety of functions, including those in popular GIS programs such as ArcMap. In ArcMap, if we wanted to join certain fields, we would need to make sure the data were identical, and commas and spaces could interrupt the join.
 
-Script 2:
+### Script 2:
 
 This script has two different purposes: converting a given temperature from the user into centigrade, and giving clothing recommendations based on the temperature they input, and the quality of clothing they are interested in. A real-life use of this script could be for international travelers on shopping trips, staying in apartment buildings where it’s difficult to go outside to tell the temperature. 
 
