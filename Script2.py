@@ -1,5 +1,10 @@
-# Place necessary comments and code here. 
-#this is an instruction for users
+# Zhen Liu and Sarah Lerman-Sinkoff
+# 10/4/2019
+# This is a script to give users options to convert a temperature of their choice into centigrate, and/or get clothing recommendations based on the temperature, and on the quality of clothing  they are interested in (high, medium, or low)
+#Inputs: temperature (in Farenheight), choice of program (convert temperature or get clothing recommendations), and clothing quality (high, medium, or low)
+#Outputs: Either temperature (in Celsius) or clothing recommendations based on temperature and quality
+#Work time: five hours between both of us
+
 tempt=-999999 # set a default temperatue to avoid the situation that there is no value for temperature from user. There are two advantages: 1. If there is no default value, it is hard to find whether users input a value into the temperature, whcih will cause errors in the program; 2. Users can change it during the whole process. If this variable was defined in the loop, for every loop it will change again because of the definition so that it is hard to change the value by users.
 tempt=input("Please input the temperature:") #get temperature input from user
 while(True):
