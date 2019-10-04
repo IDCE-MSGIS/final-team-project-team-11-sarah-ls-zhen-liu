@@ -49,27 +49,25 @@ for i in weather_forecast:
 
 # Print list to remove unicode characters
 for day in forecast:
-    # if(' then' not in day):
     list_day=day.split('\n')
-    # day.replace('then',' then')
-    if (list_day[3].find(' then')<0):
-      list_day[3]=list_day[3].replace('then',' then')
-    if (list_day[3].find(' and')<0):
-      list_day[3]=list_day[3].replace('and',' and')
+    if (list_day[3].find(' then')<0):# avoid the situation where there are two spacings before "then"
+      list_day[3]=list_day[3].replace('then',' then')# add a spacing before "then"
+    if (list_day[3].find(' and')<0):# avoid the situation where there are two spacings before "and"
+      list_day[3]=list_day[3].replace('and',' and')# add a spacing before "and"
     i=0
-    str1=""
-    # we find that the capital letter which does not preserve its space has the same characteristic. Like "yS" in "MostlySun", the letter in upper case is followed a letter in lower case. So, we go through the whole sentence to find the letter which have this characteristic, and put a space before the letter in upper case.
-    for i in range(len(list_day[3])-1):
+    str1="" # define an empty string to get correct characters
+    # we find that the capital letter which does not preserve its space has the same characteristic. Like "yS" in "MostlySun", the letter in upper case follows a letter in lower case. So, we go through the whole sentence to find the letter which have this characteristic, and put a space before the letter in upper case.
+    for i in range(len(list_day[3])-1): # we set the to avoid the situation that i+1 outranges
       if(list_day[3][i+1].isupper() and list_day[3][i].islower()):
         str1=str1+list_day[3][i]+' '
       else:
         str1=str1+list_day[3][i]
-    str1=str1+"F"
+    str1=str1+"F" #Make the sentence complete
     list_day[3]=str1
-    list_day[3]=list_day[3].replace(' Low',', Low')
+    list_day[3]=list_day[3].replace(' Low',', Low')# put a comma before the words "high" and "low" 
     list_day[3]=list_day[3].replace(' High',', High')
-    list_day[2]=list_day[2].replace('Night',' Night')
-    # Stardard Output
+    list_day[2]=list_day[2].replace('Night',' Night') # put a spacing before Night
+    # Stardard Output (make all characters in upper case)
     print list_day[2].upper()
     print list_day[3].upper()
     print("\n")
