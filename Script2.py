@@ -1,14 +1,14 @@
 # Place necessary comments and code here. 
 #this is an instruction for users
 tempt=-999999 # set a default temperatue to avoid the situation that there is no value for temperature from user. There are two advantages: 1. If there is no default value, it is hard to find whether users input a value into the temperature, whcih will cause errors in the program; 2. Users can change it during the whole process. If this variable was defined in the loop, for every loop it will change again because of the definition so that it is hard to change the value by users.
-tempt=input("Please input the temperature:")
+tempt=input("Please input the temperature:") #get temperature input from user
 while(True):
     a=input("please select 1): Change the temperature; 2): Convert into centigrade; 3): Clothing recommendations; 4): Exit.\n") # This is an instruction for users
     if(a==1):
         tempt=input("please enter the temperature in Fahrenheit:")# getting the temperrature from the keyboard
     elif(a==2):
-        if(tempt>-999999):# Determining whether users input the temperature
-            centi=(tempt-32.0)*5/9.0 # computing the centigrade
+        if(tempt>-999999):# Backup in case users don't input temperature for this variable
+            centi=(tempt-32.0)*5/9.0 # converting to centigrade
             print "Centigrade is",round(centi,3) # retaining three digits after the decimal point
         else:
             print("Please choose 1 first")
@@ -29,21 +29,21 @@ while(True):
           else:
               print("Please input the correct number")# avoiding users' wrong input
         elif(tempt>=55 and tempt<75):  #defining the temperature range for warm
-          ClothingQualityWarm=input("It's warm! Would you like 1) high, 2) medium, or 3) low quality clothing for this weather?")
+          ClothingQualityWarm=input("It's warm! Would you like 1) high, 2) medium, or 3) low quality clothing for this weather?") #telling users that it is warm (qualitatively) and asking what quality of clothing they would like
           if(ClothingQualityWarm==1):
-            print "These business casual items from Brooks Brothers will suit you, you dirty aristocrat https://magazine.brooksbrothers.com/business-casual-brooks-brothers/"
+            print "These business casual items from Brooks Brothers will suit you, you dirty aristocrat https://magazine.brooksbrothers.com/business-casual-brooks-brothers/" #outputs a link they can follow to suggestions
           
           elif(ClothingQualityWarm==2):
             print "These easy outfits from L.L. Bean will be fine, you practical, prudish New Englander https://www.llbean.com/shop/outfits/womens/index.html"
             
           elif(ClothingQualityWarm==3):
-            print "Comrade, these deals on ebay will do the trick, as we do in the bosses like Alexander Berkman and Henry Clay Frick https://www.ebay.com/b/Mens-Clothing/1059/bn_696958"
+            print "Comrade, these deals on ebay will do the trick, as we do in the bosses like Alexander Berkman and Henry Clay Frick https://www.ebay.com/b/Mens-Clothing/1059/bn_696958"  #outputs a link they can follow to suggestions
           else:
               print("Please input the correct number")
         elif(tempt>=75):  #defining the temperature range for hot
           ClothingQualityHot=input("It's hot! Would you like 1) high, 2) medium, or 3) low quality clothing for this weather?")
           if(ClothingQualityHot==1):
-            print "these Gucci swimwear options will suit your indolent lifestyle, aristocrat https://www.whowhatwear.com/luxury-swimwear-brands/slide16"
+            print "these Gucci swimwear options will suit your indolent lifestyle, aristocrat https://www.whowhatwear.com/luxury-swimwear-brands/slide16"  #outputs a link they can follow to suggestions
 
           elif(ClothingQualityHot==2):
             print "These boring swimsuits from L.L. Bean will allow you to have a moderate amount of fun, you practical, prudish New Englander https://www.llbean.com/llb/shop/516150?page=bathing-suits-and-swimwear&qs=3099119&Matchtype=e&msclkid=d12fadb8f7ef1b236086f02fa36402ec&gclid=CObGyO_lguUCFQKFgQodK4oH2A&gclsrc=ds"
@@ -51,7 +51,7 @@ while(True):
           elif(ClothingQualityHot==3):
             print "Comrade, who needs clothes in this weather???"
           else:
-              print("Please input the correct number")
+              print("Please input the correct number")  #in case they choose a number other than 1, 2, or 3
 
             
     elif(a==4):
