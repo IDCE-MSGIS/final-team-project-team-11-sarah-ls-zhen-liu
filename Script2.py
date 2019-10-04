@@ -1,17 +1,16 @@
 # Place necessary comments and code here. 
 #this is an instruction for users
 tempt=-999999 # set a default temperatue to avoid the situation that there is no value for temperature
-while(True):
-    a=input("please select 1): Input the temperature; 2): Convert into centigrade; 3): Clothing recommendations; 4): Exit.\n") # This is an instruction for users
+tempt=input("please input the temperature in Farenheit")
+while(True):  
+    a=input("please select 1): Convert into centigrade; 2): Clothing recommendations; 3): Exit.\n") # This is an instruction for users
     if(a==1):
-        tempt=input("please enter the temperature in Fahrenheit:")# get the temperrature from the keyboard
-    elif(a==2):
         if(tempt>-999999):
             centi=(tempt-32.0)*5/9.0
             print "Centigrade is",round(centi,3)
         else:
             print("Please choose 1 first")
-    elif(a==3):
+    elif(a==2):
         if(tempt>-99999 and tempt<55): #defining the temperature range for cold
           ClothingQualityCold=input("It's cold! Would you like 1) high, 2) medium, or 3) low quality clothing for this weather?")  #getting user input for what quality of clothing they want
           if(ClothingQualityCold==1):
@@ -43,7 +42,7 @@ while(True):
           elif(ClothingQualityHot==3):
             print "Comrade, who needs clothes in this weather???"
 
-    elif(a==4):
+    elif(a==3):
         print("thank you for your use!")
         break
     else:
