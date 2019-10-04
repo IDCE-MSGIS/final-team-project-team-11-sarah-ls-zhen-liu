@@ -12,7 +12,7 @@ while(True):
         else:
             print("Please choose 1 first")
     elif(a==3):
-       if(tempt>-99999 and tempt<55): #defining the temperature range for cold
+        if(tempt>-99999 and tempt<55): #defining the temperature range for cold
           ClothingQualityCold=input("It's cold! Would you like 1) high, 2) medium, or 3) low quality clothing for this weather?")  #getting user input for what quality of clothing they want
           if(ClothingQualityCold==1):
             print "this $1,095 expedition parka from Canada Goose will keep you warm, you dirty aristocrat         https://www.canadagoose.com/us/en/expedition-parka-801688665846.html?src=googleshopping&cmpid=6495103637&medium=cpc&source=google&agp=86411299348&cre=381782397258&kid=&mtype=&pla=&merchant_id=100661033&product_id=801688665846&country=US&gclid=CjwKCAjw29vsBRAuEiwA9s-0ByrMhYo39FZPbp4EnW0R_8kRY7EVywBxaI7VxtxZ9G1HsEtHSEm-WhoCmKwQAvD_BwE&gclsrc=aw.ds"
