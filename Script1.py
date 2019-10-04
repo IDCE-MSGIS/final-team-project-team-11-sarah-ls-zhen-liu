@@ -1,7 +1,9 @@
 '''
 # Assignment title: Final Project- Web-scraping Weather Forecast
-# Date: 09/23/2019
+# Name: Zhen Liu and Sarah Lerman-Sinkoff
+# Date: 10/04/2019
 # Description: The script web-scrapes the weather.gov website to extract the 5-Day weather forecast for a given location
+# time: 3 hours
 # Inputs: Latitude & Longitude in Decimal Degrees
 # Outputs: 5-Day Weather Forecast
 '''
@@ -66,6 +68,7 @@ for day in forecast:
     list_day[3]=str1
     list_day[3]=list_day[3].replace(' Low',', Low')
     list_day[3]=list_day[3].replace(' High',', High')
+    list_day[2]=list_day[2].replace('Night',' Night')
     # Stardard Output
     print list_day[2].upper()
     print list_day[3].upper()
